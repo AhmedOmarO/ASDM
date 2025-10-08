@@ -1,0 +1,72 @@
+<!-- :::{.callout-note}
+## Instruction
+
+This is a quarto file. If you open its [source](report_template.qmd) in RStudio, you will get all the features of this interactive notebook-style document. If you want to know more about how to use this file to generate a .html document to hand in, look at [the getting started guide](https://quarto.org/docs/get-started/hello/rstudio.html).
+
+(Delete this callout box before handing in your assignment.)
+::: -->
+
+```{r}
+#| label: R packages
+#| echo: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+# additional packages here
+```
+
+```{r}
+#| label: data loading
+#| echo: false
+
+# your R code to load the data here
+```
+
+# Data descriptionsdgsdf 
+
+Describe the data and use a visualization to support your story. (approx. one or two paragraphs)
+
+```{r}
+#| label: eda visualization
+
+# your R code to generate the plot here
+
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  theme_minimal()
+```
+
+# Model description
+
+Briefly describe which models you compare to perform prediction. (approx. two or three paragraphs)
+
+# Data transformation and pre-processing
+
+Describe additional pre-processing steps you have used, if any (e.g., dealing with categorical data, scaling). If you do not do any pre-processing, you can leave this section out.
+
+# Model comparison
+
+Describe how you compare the methods and why. (approx. two or three paragraphs)
+
+# Chosen modelss
+
+Show which method is best and why. (approx. one paragraph) You are welcome to use tables and plots!
+
+```{r}
+#| label: table example
+data.frame(
+  model       = c("Cool model 1", "Cool model 2"),
+  performance = c(1.2, 1.8),
+  other       = c(0.5, 0.3),
+  notes       = c("Some note", "another note")
+)
+```
+
+# Team member contributions
+
+Write down what each team member contributed to the project.
+
+- Author One: a, b, c
+- Author Two: b, c, d
+- Author Three: a, b, d
